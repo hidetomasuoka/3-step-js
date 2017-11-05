@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>if文のテスト</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<script type="text/javascript">
+var refValue = 80;	//基準値
+var score;	//点数
+score = prompt("点数を入力してください", 80);	
+
+if (score == 100) {
+	document.write("<h1>百点満点!</h1>");
+}
+if (score >= refValue) {
+	document.write("<h1>合格です</h1>");
+	document.write("<p>よくがんばりました</p>");
+} else {
+	document.write("<h1>不合格です</h1>");
+	document.write("<p>もう少しがんばりましょう</p>");
+}
+</script>
+
+</body>
+</html>

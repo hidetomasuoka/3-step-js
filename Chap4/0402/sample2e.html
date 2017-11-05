@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>if文で春夏秋冬を判断する</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<script type="text/javascript">
+var month;
+month = prompt("月を入力してください", 1);
+
+if ((month == 12) || (month == 1) || (month == 2)) {
+	document.write("<h1>冬</h1>");
+} else if ((month >= 3) && (month <= 5)) {
+	document.write("<h1>春</h1>");
+} else if ((month >= 6) && (month <= 8)) {
+	document.write("<h1>夏</h1>");
+} else if ((month >=9) && (month <=11)) {
+	document.write("<h1>秋</h1>");
+} else {
+	document.write("<h1>1から12の値を入力してください</h1>");
+}
+</script>
+
+</body>
+</html>

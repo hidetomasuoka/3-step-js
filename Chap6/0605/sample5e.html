@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>リンクや文字を設定するメソッド</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<script type="text/javascript">
+var url = "http://google.co.jp";
+var text = "Google".link(url) + "で検索";
+document.write("<h1>", text, "</h1>");
+
+var str1 = "Stringオブジェクトのメソッド";
+for (var i = 1; i <= 7; i++){
+	document.write("<p>", str1.fontsize(i), "</p>");
+}
+</script>
+</body>
+</html>
+

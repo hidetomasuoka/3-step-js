@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>連想配列</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<script type="text/javascript">
+var colors = new Object();
+colors["white"] = "白色";
+colors["red"] = "赤色";
+colors["green"] = "緑色";
+colors["yellow"] = "黄色";
+//document.write("<h2>", colors["red"], "</h2>");
+for (var eigo in colors){
+	document.write("<h2>", eigo + " " + colors[eigo] , "</h2>");
+}
+</script>
+</body>
+</html>

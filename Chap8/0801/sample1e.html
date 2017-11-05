@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>navigatorオブジェクト</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<script type="text/javascript">
+/*
+for (var prop in navigator) {
+	document.write("<p>", prop, ":", navigator[prop], "</p>");
+}
+*/
+var platform = navigator.platform;
+if (platform.indexOf("Mac") >= 0 ) {
+	document.write("<h1>こんにちはMacユーザーさん</h1>");
+} else if (platform.indexOf("Win") >= 0 ) {
+	document.write("<h1>こんにちはWinユーザーさん</h1>");
+} else {
+	document.write("<h1>こんにちはその他OSのユーザーさん</h1>");
+}
+</script>
+</body>
+</html>

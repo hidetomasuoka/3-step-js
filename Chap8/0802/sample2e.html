@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>イベントハンドラのテスト</title>
+<script type="text/javascript">
+function func1(str) {
+	alert(str + "がクリックされました");
+}
+
+function init() {
+	alert("ドキュメントがロードされました");
+}
+window.onload = init;
+</script>
+</head>
+
+<body bgcolor="#FFFFFF">
+<form id="myForm" name="myForm"><p>
+<input type="button" value="ボタン1" 
+	name="button1" onclick="func1('ボタン1');">
+</p></form>
+</body>
+</html>

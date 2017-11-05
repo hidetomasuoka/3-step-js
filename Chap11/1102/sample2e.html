@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>XmlHttpRequestオブジェクト</title>
+<style type="text/css">
+body {
+	text-align: center;
+}
+#myArea {
+	background:yellow;
+}
+</style>
+<script type="text/javascript">
+var req;
+function getFile(path) {
+	req = new XMLHttpRequest();
+	req.onreadystatechange = showData;
+	req.open("GET", path, true);
+	req.send(null);
+}
+
+function showData() {
+	if (req.readyState == 4 && req.status == 200) {
+		document.getElementById("myArea").innerHTML = 		
+						req.responseText;
+	}
+}
+</script>
+</head>
+<body bgcolor="#ffffff">
+<form name="myForm"><p>
+<input type="button" value="ロード" 
+	onclick="getFile('data.txt');">
+<p></form>
+<div id="myArea">
+</div>
+</body>
+</html>

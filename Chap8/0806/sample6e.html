@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>イメージの操作</title>
+<style type="text/css">
+body {
+	text-align: center;
+}
+</style>
+<script type="text/javascript">
+var imgs;
+function init() {
+	imgs = new Array(3);
+	for (var i = 0; i <= (imgs.length - 1); i++) {
+		imgs[i] = new Image(250, 207);
+		imgs[i].src =  "images/pic" + i + ".jpg"
+	}
+}
+window.onload = init;
+
+var num = 0;
+function changeImg() {
+	document.myImg.src = imgs[num].src
+	num++;
+	if (num == 3) num = 0;
+}
+</script>
+</head>
+<body bgcolor="#FFFFFF">
+<img src="images/off.jpg" name="myImg"
+	width="250" height="207"
+	onclick="changeImg()"
+	onmouseout="this.src='images/off.jpg';"
+>
+</body>
+</html>
